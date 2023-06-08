@@ -1,31 +1,36 @@
-// Calling a Function
+// Parameters and Arguments
 
-// As we saw in previous exercises, a function declaration binds a function to an identifier.
+// So far, the functions we’ve created execute a task without an input. However, some functions can take inputs and use the inputs to perform a task. When declaring a function, we can specify its parameters. Parameters allow functions to accept input(s) and perform a task using the input(s). We use parameters as placeholders for information that will be passed to the function when it is called. 
 
-// However, a function declaration does not ask the code inside the function body to run, it just declares the existence of the function. The code inside a function body runs, or executes, only when the function is called.
-
-// To call a function in your code, you type the function name followed by parentheses.
-// Diagram showing the syntax of invoking a function
+// Let’s observe how to specify parameters in our function declaration:
 
 // IMAGE NOT AVAILABLE
 
-// This function call executes the function body, or all of the statements between the curly braces in the function declaration. 
+// In the diagram above, calculateArea(), computes the area of a rectangle, based on two inputs, width and height. The parameters are specified between the parenthesis as width and height, and inside the function body, they act just like regular variables. width and height act as placeholders for values that will be multiplied together. 
+
+// When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called arguments. Arguments can be passed to the function as values or variables. 
 
 // IMAGE NOT AVAILABLE
 
-// We can call the same function as many times as needed.
-// Let’s practice calling functions in our code. 
+// In the function call above, the number 10 is passed as the width and 6 is passed as height. Notice that the order in which arguments are passed and assigned follows the order that the parameters are declared. 
 
-// 1. Imagine that you manage an online store. When a customer places an order, you send them a thank you note. Let’s create a function to complete this task:
-//   * Define a function called sayThanks() as a function declaration.
-//   * In the function body of sayThanks(), add code such that the function writes the following thank you message to the console when called: 'Thank you for your purchase! We appreciate your business.'
-// 2. Call sayThanks() to view the thank you message in the console.
-// 3. Functions can be called as many times as you need them. Imagine that three customers placed an order and you wanted to send each of them a thank you message. Update your code to call sayThanks() three times.
+// IMAGE NOT AVAILABLE
 
-function sayThanks() {
-  console.log("Thank you for your purchase! We appreciate your business.")
-}
+// The variables rectWidth and rectHeight are initialized with the values for the height and width of a rectangle before being used in the function call. 
 
-sayThanks()
-sayThanks()
-sayThanks()
+// By using parameters, calculateArea() can be reused to compute the area of any rectangle! Functions are a powerful tool in computer programming so let’s practice creating and calling functions with parameters.
+
+// 1. The sayThanks() function works well, but let’s add the customer’s name in the message. Add a parameter called name to the function declaration for sayThanks(). 
+// 2. With name as a parameter, it can be used as a variable in the function body of sayThanks(). Using name and string concatenation, change the thank you message into the following: 
+
+// 'Thank you for your purchase '+ name + '! We appreciate your business.'
+
+// Copy and paste the above message into your code.
+// 3. A customer named Cole just purchased something from your online store. Call sayThanks() and pass 'Cole' as an argument to send Cole a personalized thank you message.
+
+
+function sayThanks(name) {
+    console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+  }
+  
+  sayThanks("Cole")
